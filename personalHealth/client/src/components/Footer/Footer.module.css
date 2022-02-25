@@ -1,23 +1,21 @@
 .container {
   display:flex;
   flex-direction:row;
-  justify-content:center;
+  justify-content:space-evenly;
   align-items:center;
-  background-color: #BECCE4;
-  width:100%;
-  position:sticky;
-  bottom:0;
+  background-color:  #BECCE4;
+  width:100% !important;
+  position: absolute;
   z-index:3;
-  height:5vh;
-   
+  height:82px;
+  padding: 24px;
+  bottom: 0;
 }
 
 .button {
   color: black;
-  text-decoration: none;
-  display: flex;
   border: none;
   background-color:transparent;
-  
+  height: 34px;
 
 }
