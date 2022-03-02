@@ -9,17 +9,19 @@ import ForgotPassword from './components/Register/User/ForgotPassword';
 import MyQr from './components/myQr/myQr';
 import CardDetail from './components/CardDetail/CardDetail.js';
 import TerminosCondiciones from './components/Terminos Condiciones/TerminosCondiciones';
+import Maps from './components/Maps/Maps';
 
 function App() {
   return (
     <div>
       <Routes>
         <Route path="/Home" element={<Home />}/>
-        <Route path="/InicioSesion" element={<InicioSesion />}/>
+        <Route path="/" element={<InicioSesion />}/>
         <Route path="/Login" element={<Login />}/>
         <Route path="/SignUp" element={<SignUp />}/>
         <Route path="/UpdateProfile" element={<UpdateProfile />}/>
         <Route path="/ForgotPassword" element={<ForgotPassword />}/>
+        <Route path="/Maps" element={<Maps />}/>
         <Route path="/TerminosCondiciones" element={<TerminosCondiciones />}/>
         <Route path="/Detail" element={<CardDetail />}/>
         <Route path="/MyQr" element={<MyQr />}/>
