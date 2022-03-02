@@ -1,0 +1,40 @@
+.title{
+    font-style: 'Roboto';
+    font-weight: 600;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 110px;
+
+}
+.formRegister{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px;
+}
+.formControl{
+    border: 1.5px solid #767676;
+    border-radius: 10px;
+    height: 47px;
+    padding: 20px;
+}
+.inputConteiner{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.btnPrim {
+    size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #FFFFFF;
+    background-color: #3F6099;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 115px;
+    border: none;
+    align-self: stretch;
+    width: auto;
+}
