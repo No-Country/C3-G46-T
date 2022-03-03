@@ -10,6 +10,7 @@ import MyQr from './components/myQr/myQr';
 import CardDetail from './components/CardDetail/CardDetail.js';
 import TerminosCondiciones from './components/Terminos Condiciones/TerminosCondiciones';
 import Maps from './components/Maps/Maps';
+import Calendar from './components/Calendar/Calendar'
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/UpdateProfile" element={<UpdateProfile />}/>
         <Route path="/ForgotPassword" element={<ForgotPassword />}/>
         <Route path="/Maps" element={<Maps />}/>
+        <Route path="/Calendar" element={<Calendar />}/>
         <Route path="/TerminosCondiciones" element={<TerminosCondiciones />}/>
         <Route path="/Detail" element={<CardDetail />}/>
         <Route path="/MyQr" element={<MyQr />}/>
