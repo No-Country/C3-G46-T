@@ -49,8 +49,13 @@
   height: 90px;
   background-color: #DBE2F0;
   width: 100%;
-  justify-content: space-evenly;
-  
+  gap: 30px;
+  font-size: 13px;
+  padding-left: 40px;  
+}
+.link{
+  text-decoration: none;
+  color: #3F6099;
 }
 .optionIcon{
 

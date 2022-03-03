@@ -1,10 +1,15 @@
 
-.linkAtras{
+.backContainer{
     color: black;
     font-weight: 500;
     font-size: 1rem;
     font-family: "Roboto";
+    padding: 40px 28px;
+
+}
+.linkAtras{
     text-decoration: none;
+    font-family: "Roboto";
 }
 .loginTitle{
     font-style: 'Roboto';
@@ -45,4 +50,13 @@ padding:18px;
     border: none;
     align-self: stretch;
     width: auto;
+}
+.textRestaurar{
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+.linkRestaurar{
+    text-decoration: none;
+    color: #005778;
 }

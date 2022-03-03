@@ -4,7 +4,9 @@ const Login = () => {
   return (
     <div>
       <form>
-        <a href='/Home'> <div className={style.linkAtras}> ◀ Atrás</div></a>
+        <a href='/Home' className={style.linkAtras}> <div className={style.backContainer}> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.75" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg> Atrás</div></a>
         <h2 className={style.loginTitle}>Inicio de sesión</h2>
         <div className={style.formLogin}>  
            <div className={style.inputConteiner}>
@@ -12,7 +14,9 @@ const Login = () => {
                 <input type="password" className={style.formControl} id="exampleInputPassword1" placeholder='Contraseña'/>
           </div>
              <button type="submit" className={style.btnPrim}>Iniciar sesión</button>
-             <a href='/ForgotPassword'> <div className={style.linkRestaurar} >¿Olvidaste tu contraseña?</div></a>
+             <a href='/ForgotPassword' className={style.linkRestaurar}>
+                <p className={style.textRestaurar} >¿Olvidaste tu contraseña?
+                </p></a>
         </div>
         {/* <div class="form-loggin-password">
         </div> */}
