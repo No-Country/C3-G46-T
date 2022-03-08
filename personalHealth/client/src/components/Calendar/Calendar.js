@@ -17,7 +17,7 @@ const dataSource = AspNetData.createStore({
 });
 
 const currentDate = new Date(2022, 3, 2);
-const views = ['day', 'workWeek', 'month'];
+const views = ['Dìa', 'Semana', 'Mes'];
 
 class Calendar extends React.Component {
   render() {
@@ -26,7 +26,7 @@ class Calendar extends React.Component {
         timeZone="America/Los_Angeles"
         dataSource={dataSource}
         views={views}
-        defaultCurrentView="day"
+        defaultCurrentView="dìa"
         defaultCurrentDate={currentDate}
         height={600}
         startDayHour={9}
