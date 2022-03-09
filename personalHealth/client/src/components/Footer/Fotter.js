@@ -1,5 +1,6 @@
 import React from 'react';
 import style from "./Footer.module.css"
+import MisAtencionesBTn from "../../assets/MisAtencionesBTn.png"
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
       </div>
       <div className={style.button}>
         <a className={style.button} href='/Atenciones' >
-        <img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/64/000000/external-cross-medical-dreamstale-lineal-dreamstale.png" alt='' width={25}/>Mis Atenciones</a>
+          <img src={MisAtencionesBTn} className={style.btn} />Mis Atenciones</a>
       </div>
       <div className={style.button}>
         <a className={style.button} href='/MiHistoria' >

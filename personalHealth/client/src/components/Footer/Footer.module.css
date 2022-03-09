@@ -16,10 +16,19 @@
   flex-direction: column;
   align-items: center;
   font-size: 11px;
-  color: black;
+  color: #395689;
   border: none;
   background-color:transparent;
   height: 40px;
   text-decoration: none;
 
+}
+.btn{
+  height: 25px;
+  color: #395689;
+  border: bold;
+}
+
+.button .btn:active{
+  fill: #395689;
 }

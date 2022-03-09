@@ -6,3 +6,13 @@
     margin: 0;
     padding: 15%;
 }
+.LandingPageLogo{
+    width: 268px;
+    height: 268px;
+    animation-name: MyAnimation;
+}
+@keyframes MyAnimation{
+    0%{ width: 134px;}
+    50%{ width: 201px;}
+    100%{width: 268px;}
+}
