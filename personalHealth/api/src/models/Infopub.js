@@ -24,5 +24,5 @@ module.exports = (sequelize) => {
     infoimportant: {
         type: DataTypes.STRING,
     },
-}, { sequelize, tableName: 'infopub' });
+}, { sequelize, tableName: 'infopub', timestamps: false });
 }

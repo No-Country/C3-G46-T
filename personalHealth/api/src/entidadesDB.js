@@ -34,18 +34,15 @@ let database = [
 async function entidadesDB (){
   try {  
     await database.map (element => {
-      Entidad.create({
-       
+      Entidad.create({ 
           name: element.name,
           adress: element.adress,
           professional: element.professional,
           matric: element.matric,
           specialties: element.specialties,
-        
       });
     });
     console.log('La Base de Datos se cargo correctamente');
-
   } catch (err) {
     console.log(err);
   }

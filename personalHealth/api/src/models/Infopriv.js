@@ -7,7 +7,7 @@ class Infopriv extends Model {}
 module.exports = (sequelize) => {
     return Infopriv.init({
         fecha: {
-            type: DataTypes.DATEONLY,
+            type: DataTypes.STRING,
         },
         disease: {
             type: DataTypes.STRING,

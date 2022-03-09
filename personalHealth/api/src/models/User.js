@@ -10,12 +10,12 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
-      autoIncrement: false
+      unique: true
     },
     names: {
       type: DataTypes.STRING,
     },
-    lastName: {
+    lastname: {
       type: DataTypes.STRING,
     },
     sex: {
