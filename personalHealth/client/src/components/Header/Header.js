@@ -11,7 +11,7 @@ const Header = () => {
                 <a className={style.linkItemNav} aria-current="page" href="//">Menu</a>
             </li>
             <li className={style.navItem}>
-                <a className={style.linkItemNav} href="/Info">Mi Perfil</a>
+                <a className={style.linkItemNav} href="/Home">Mi Perfil</a>
             </li>
             <li className={style.navItem}>
                 <a className={style.linkItemNav} href="/myQr">QR</a>
