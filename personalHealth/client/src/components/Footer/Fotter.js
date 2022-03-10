@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Footer.module.css"
-import MisAtencionesBTn from "../../assets/MisAtencionesBTn.png"
+import MisAtencionesBTn from "../../assets/MisAtencionesBtn.png"
 
 const Footer = () => {
   return (
