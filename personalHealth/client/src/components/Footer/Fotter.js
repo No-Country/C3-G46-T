@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./Footer.module.css"
-import MisAtencionesBTn from "../../assets/MisAtencionesBTn.png"
+import MisAtencionesBTn from "../../assets/MisAtencionesBtn.png"
 
 const Footer = () => {
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div className={style.button}>
         <a className={style.button} href='/Atenciones' >
-          <img src={MisAtencionesBTn} className={style.btn} />Mis Atenciones</a>
+          <img src={MisAtencionesBTn} alt="" className={style.btn} />Mis Atenciones</a>
       </div>
       <div className={style.button}>
         <a className={style.button} href='/MiHistoria' >
