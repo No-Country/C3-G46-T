@@ -3,12 +3,14 @@ const router = Router()
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 //modelos acá:
-const { User, Infopub } = require('../../db')
+const { User, Infopub, conn } = require('../../db')
 
 /**MODELS -->  USER  <--
  * documento  -> type: DataTypes.INTEGER
  * names  -> DataTypes.STRING
  * lastname  -> DataTypes.STRING
+ * password  -> DataTypes.STRING
+ * email  -> DataTypes.STRING
  * sex  -> DataTypes.STRING
  * adress  ->  DataTypes.STRING
  * phone  -> DataTypes.STRING
@@ -19,12 +21,14 @@ const { User, Infopub } = require('../../db')
 //rutas usuarios
 
 router.post('/register', async (req, res) => { //Crear un registro de usuario
-  let { documento, names, lastname, sex, adress, phone, healthprovider } = req.body;
+  let { documento, names, lastname, password, email, sex, adress, phone, healthprovider } = req.body;
   try {
     const newUser = await User.create({
       documento: documento,
       names: names,
       lastname: lastname,
+      password: password,
+      email: email,
       sex: sex,
       adress: adress,
       phone: phone,
@@ -36,14 +40,26 @@ router.post('/register', async (req, res) => { //Crear un registro de usuario
   }
 })
 
+router.post('/login', async (req, res) => { //COnfirma un login de usuario
+  let { documento, password } = req.body;
+  const result = await User.findOne({ where: { documento: documento, password: password } })
+  if (result) {
+    res.send({ message: "Wrong username/password combination!" });
+  } else {
+    res.send({ message: "User doesn't exist" })
+  }
+})
+
 router.put('/user/:id', async (req, res) => { // Actualizar datos del usuario
   const id = req.params.id
-  const { names, lastname, sex, adress, phone, healthprovider } = req.body
+  const { names, lastname, password, email, sex, adress, phone, healthprovider } = req.body
   try {
     const user = await User.findByPk(id)
     await user.update({
       names: names || user.dataValues.names,
       lastname: lastname || user.dataValues.lastname,
+      password: password || user.dataValues.password,
+      email: email || user.dataValues.email, 
       sex: sex || user.dataValues.sex,
       adress: adress || user.dataValues.adress,
       phone: phone || user.dataValues.phone,
@@ -60,7 +76,7 @@ router.put('/user/:id', async (req, res) => { // Actualizar datos del usuario
 })
 
 
-router.get('/users/', async (req, res) => {//Busca un usuario por nombres
+router.get('/user', async (req, res) => {//Busca un usuario por nombres
   const {names}= req.query;
   try {
     const userSearch = await User.findAll({where: {names: {[Op.like]: `%${names}%`}}})
@@ -70,7 +86,7 @@ router.get('/users/', async (req, res) => {//Busca un usuario por nombres
 }
 })
 
-router.get('/user', async (req, res) => { // Leer los usuarios que hay en la DB 
+router.get('/users', async (req, res) => { // Leer los usuarios que hay en la DB 
   const user = await User.findAll({include:Infopub})
   res.json(user) 
 })
@@ -111,6 +127,7 @@ router.post('/infopublica', async (req, res) => { //Crea una nueva info publica
       infoimportant: infoimportant,
     }, /*{ include: [ User ] }*/
     )
+    console.log(newInfo) 
     newInfo.addUser(UserDocumento)// <--  No asocia todavia  /////////////////// 
     return res.send(newInfo)
   } catch (error) {

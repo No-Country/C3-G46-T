@@ -67,7 +67,7 @@ router.get('/entidad/', async (req, res) => {//Busca un usuario por nombres
 })
 
 router.get('/entidades', async (req, res) => { // Leer las Entidades que hay en la DB 
-  const entidades = await Entidad.findAll({include:Infopriv})
+  const entidades = await Entidad.findAll({}) // include:Infopriv
   res.json(entidades) 
 })
 
