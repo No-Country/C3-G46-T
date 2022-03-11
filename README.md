@@ -27,3 +27,6 @@
   
  **Link DEPLOY:**
   
+  
+  **Notas:** Para correr la app en local, realizar NPM Install tanto en la carpeta Client, como Api.
+  
