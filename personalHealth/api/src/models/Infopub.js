@@ -7,7 +7,7 @@ class Infopub extends Model {}
 module.exports = (sequelize) => {
     return Infopub.init({
     fecha: {
-        type: DataTypes.DATEONLY,
+        type: DataTypes.STRING,
     },
     blood: {
         type: DataTypes.STRING,

@@ -3,7 +3,7 @@ const router = Router()
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 //modelos acá:
-const { User, Infopub, conn } = require('../../db')
+const { User, Infopub } = require('../../db')
 
 /**MODELS -->  USER  <--
  * documento  -> type: DataTypes.INTEGER
@@ -128,7 +128,7 @@ router.post('/infopublica', async (req, res) => { //Crea una nueva info publica
     }, /*{ include: [ User ] }*/
     )
     console.log(newInfo) 
-    newInfo.addUser(UserDocumento)// <--  No asocia todavia  /////////////////// 
+    //newInfo.addUser(UserDocumento)// <--  No asocia todavia  /////////////////// 
     return res.send(newInfo)
   } catch (error) {
     res.send(error).status(404)
