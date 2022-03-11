@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { login } from '../../../actions';
 import style from "./Login.module.css"
 
 const Login = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [user, setUser] = useState({
     documento: "",
     password: "",
@@ -21,6 +23,7 @@ const Login = () => {
     e.preventDefault()
     console.log(user)
     dispatch(login(user))
+    navigate( "/Home")
   }
 
   return (

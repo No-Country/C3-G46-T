@@ -11,12 +11,11 @@ import TerminosCondiciones from './components/Terminos Condiciones/TerminosCondi
 import Maps from './components/Maps/Maps';
 import Calendar from './components/Calendar/Calendar';
 import MiHistoria from './components/MiHistoria/MiHistoria.js';
-<<<<<<< HEAD
 import Instituciones from './components/Instituciones/Instituciones';
-
-=======
 import 'bootstrap/dist/css/bootstrap.min.css';
->>>>>>> d4d8cc1235874b7f45aebeb9d525b70d2994fb00
+import Perfil from './components/Perfil/Perfil';
+
+
 function App() {
   return (
     <div>
@@ -33,6 +32,7 @@ function App() {
         <Route path="/MyQr" element={<MyQr />}/>
         <Route path="/MiHistoria" element={<MiHistoria />}/>
         <Route path="/Entidades" element={<Instituciones/>}/>
+        <Route path="/Perfil" element={<Perfil/>}/>
       </Routes>
     </div>
   );

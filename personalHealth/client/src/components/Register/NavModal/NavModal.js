@@ -15,6 +15,7 @@ return ReactDom.createPortal(
       <NavLink to='/Login'>
         <button className={style.btnPrim}> Iniciar Sesion</button>
       </NavLink>
+      <br />
       <NavLink to='/SignUp' >
         <button type='button' className={style.btnSecon}> Crear cuenta</button>
       </NavLink>

@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import { Navigate, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import {useDispatch} from 'react-redux';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { crearUsuario } from '../../../actions';

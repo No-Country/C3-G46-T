@@ -3,6 +3,7 @@ import Footer from '../Footer/Fotter';
 import Header from '../Header/Header';
 import style from "./MiHistoria.module.css";
 import { Accordion } from 'react-bootstrap';
+
 const MiHistoria = () => {
     return(
         <>
