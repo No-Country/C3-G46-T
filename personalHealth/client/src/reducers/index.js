@@ -1,10 +1,10 @@
-import {GET_USER, LOGIN, POST_USER} from "../actions/index"
+import {GET_ENTIDADES, GET_USER, LOGIN, POST_USER} from "../actions/index"
 
 const initialState = { 
   user: {},
-  users: []
+  users: [],
+  entidades:[]
 }
-
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -22,6 +22,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         users: action.payload
+      }
+    case GET_ENTIDADES:
+      return {
+        ...state,
+        entidades: action.payload
       }
     default:
       return state;

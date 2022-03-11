@@ -7,11 +7,11 @@ import SignUp from './components/Register/User/SignUp';
 import UpdateProfile from './components/Register/User/UpdateProfile';
 import ForgotPassword from './components/Register/User/ForgotPassword';
 import MyQr from './components/myQr/myQr';
-import CardDetail from './components/CardDetail/CardDetail.js';
 import TerminosCondiciones from './components/Terminos Condiciones/TerminosCondiciones';
 import Maps from './components/Maps/Maps';
 import Calendar from './components/Calendar/Calendar';
 import MiHistoria from './components/MiHistoria/MiHistoria.js';
+import Instituciones from './components/Instituciones/Instituciones';
 
 function App() {
   return (
@@ -26,9 +26,9 @@ function App() {
         <Route path="/Maps" element={<Maps />}/>
         <Route path="/Calendar" element={<Calendar />}/>
         <Route path="/TerminosCondiciones" element={<TerminosCondiciones />}/>
-        <Route path="/Detail" element={<CardDetail />}/>
         <Route path="/MyQr" element={<MyQr />}/>
         <Route path="/MiHistoria" element={<MiHistoria />}/>
+        <Route path="/Entidades" element={<Instituciones/>}/>
       </Routes>
     </div>
   );
