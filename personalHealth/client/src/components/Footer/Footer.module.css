@@ -9,6 +9,7 @@
   height:82px;
   padding: 24px;
   bottom: 0;
+  position: fixed;
 }
 
 .button {

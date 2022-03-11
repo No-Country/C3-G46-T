@@ -4,7 +4,6 @@ import { getUser } from '../../actions';
 import Footer from '../Footer/Fotter';
 import ListGroup from 'react-bootstrap/ListGroup'
 import style from './Perfil.module.css'
-import { Link } from 'react-router-dom';
 
 
 const Perfil = () => {

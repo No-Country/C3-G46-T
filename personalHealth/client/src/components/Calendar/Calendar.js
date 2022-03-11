@@ -1,5 +1,5 @@
 import React from 'react';
-
+import style from './Calendar.module.css'
 import Scheduler from 'devextreme-react/scheduler';
 
 import * as AspNetData from 'devextreme-aspnet-data-nojquery';
@@ -16,12 +16,16 @@ const dataSource = AspNetData.createStore({
   },
 });
 
-const currentDate = new Date(2022, 3, 2);
+const currentDate = new Date(2022, 3, 12);
 
 const views = ['day', 'workWeek','month' ];
 class Calendar extends React.Component {
   render() {
     return (
+      <>
+      <a href='/Home' className={style.linkAtras}> <div className={style.backContainer}> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="13.75" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+        </svg> Atrás</div></a>
       <Scheduler
         timeZone="America/Los_Angeles"
         dataSource={dataSource}
@@ -39,6 +43,7 @@ class Calendar extends React.Component {
         allDayExpr="AllDay"
         recurrenceRuleExpr="RecurrenceRule"
         recurrenceExceptionExpr="RecurrenceException" />
+        </>
     );
   }
 }

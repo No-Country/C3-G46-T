@@ -1,9 +1,10 @@
-import {GET_ENTIDADES, GET_USER, LOGIN, POST_USER} from "../actions/index"
+import {GET_ENTIDADES, GET_INFO, GET_USER, LOGIN, POST_INFO, POST_USER} from "../actions/index"
 
 const initialState = { 
   user: {},
   users: [],
-  entidades:[]
+  entidades:[],
+  info: []
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -23,10 +24,20 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         users: action.payload
       }
+    case GET_INFO:
+      return {
+        ...state,
+        info: action.payload
+      }
     case GET_ENTIDADES:
       return {
         ...state,
         entidades: action.payload
+      }
+    case POST_INFO:
+      return {
+        ...state,
+        user: action.payload
       }
     default:
       return state;

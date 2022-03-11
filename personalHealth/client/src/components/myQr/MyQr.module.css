@@ -3,8 +3,22 @@
     flex-direction: column;
     justify-content:center;
     align-items: center;
-
+    margin-top: 25%;
 }
+
+.header {
+  position: absolute;
+  width: 18px;
+  height: 19px;
+  left: 46%;
+  top: 66px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 19px;
+}
+
 .qr {
     padding: 10%;
     transform: scale(1);
@@ -15,4 +29,17 @@
     padding: 20%;
     transform: scale(2);
     transition: 2s;
+}
+
+.backContainer{
+    color: black;
+    font-weight: 500;
+    font-size: 1rem;
+    font-family: "Roboto";
+    padding: 40px 28px;
+
+}
+.linkAtras{
+    text-decoration: none;
+    font-family: "Roboto";
 }

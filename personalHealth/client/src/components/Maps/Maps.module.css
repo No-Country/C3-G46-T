@@ -1,11 +1,30 @@
-.backContainer{
-    color: black;
-    font-weight: 500;
-    font-size: 1rem;
-    font-family: "Roboto";
-
+.container {
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
 }
+
+.backContainer{
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Roboto";
+}
+
 .linkAtras{
-    text-decoration: none;
-    font-family: "Roboto";
+  text-decoration: none;
+  font-family: "Roboto";
+}
+
+.header {
+  position: absolute;
+  left: 44%;
+  top: 30px;
+  font-family: 'Roboto';   
+  font-size: 18px;
+}
+
+.mapa {
+  margin-top: 15% !important;
+  margin-top: 0;
 }

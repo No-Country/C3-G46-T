@@ -12,8 +12,10 @@ import Maps from './components/Maps/Maps';
 import Calendar from './components/Calendar/Calendar';
 import MiHistoria from './components/MiHistoria/MiHistoria.js';
 import Instituciones from './components/Instituciones/Instituciones';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Perfil from './components/Perfil/Perfil';
+import Info from './components/Info/Info';
+import CreateInfo from './components/Info/CreateInfo';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {
@@ -33,6 +35,8 @@ function App() {
         <Route path="/MiHistoria" element={<MiHistoria />}/>
         <Route path="/Entidades" element={<Instituciones/>}/>
         <Route path="/Perfil" element={<Perfil/>}/>
+        <Route path="/Info" element={<Info/>}/>
+        <Route path="/CrearInfo" element={<CreateInfo/>}/>
       </Routes>
     </div>
   );
