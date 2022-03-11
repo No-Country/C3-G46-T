@@ -12,7 +12,7 @@ import TerminosCondiciones from './components/Terminos Condiciones/TerminosCondi
 import Maps from './components/Maps/Maps';
 import Calendar from './components/Calendar/Calendar';
 import MiHistoria from './components/MiHistoria/MiHistoria.js';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div>
