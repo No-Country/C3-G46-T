@@ -1,7 +1,8 @@
-import {LOGIN, POST_USER} from "../actions/index"
+import {GET_USER, LOGIN, POST_USER} from "../actions/index"
 
 const initialState = { 
-  user: {}
+  user: {},
+  users: []
 }
 
 
@@ -16,6 +17,11 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         user: action.payload
+      }
+    case GET_USER:
+      return {
+        ...state,
+        users: action.payload
       }
     default:
       return state;

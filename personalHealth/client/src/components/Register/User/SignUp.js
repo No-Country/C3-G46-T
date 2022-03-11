@@ -1,12 +1,13 @@
-import React, { useEffect, useState} from 'react';
-import { useHistory } from 'react-router-dom'
-import {useDispatch, useSelector} from 'react-redux';
+import React, { useState} from 'react';
+import { Navigate, useNavigate } from 'react-router-dom'
+import {useDispatch} from 'react-redux';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { crearUsuario } from '../../../actions';
 import style from "./SignUp.module.css"
 
 const SignUp = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   const [user, setUser] = useState({
     documento: "",
     names: "",
@@ -31,6 +32,7 @@ const SignUp = () => {
     e.preventDefault()
     console.log(user)
     dispatch(crearUsuario(user))
+    navigate( "/Login")
   }
 
   return (
@@ -102,7 +104,7 @@ const SignUp = () => {
           <input className={style.formControl} type="password" id="InputPassword1" placeholder='Repetir contraseña' />
         </div>
         <HCaptcha sitekey="d5959e8e-93a5-49bf-89b5-35dbcf4657c7" />
-        <a href='/Login'><button type="submit" onClick={handleSubmit} className={style.btnPrim} >Crear cuenta</button></a>
+        <button type="submit" onClick={ handleSubmit} className={style.btnPrim} >Crear cuenta</button>
         <br />
         <a href='./TerminosCondiciones'><button type="button" class="btn btn-outline-secondary"> Terminos y Condiciones</button></a>
       </form>
